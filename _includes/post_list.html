@@ -1,0 +1,8 @@
+<ul class="post-list">
+  {% for post in include.posts %}
+    <li>
+      <a class="post-title" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+      {% include post_meta.html post=post %}
+    </li>
+  {% endfor %}
+</ul>

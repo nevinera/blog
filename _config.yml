@@ -1,0 +1,38 @@
+title: nevinera
+description: Building Delve, an open-source MMO, and other things.
+url: https://blog.nevinera.dev
+author:
+  name: nevinera
+
+permalink: /:year/:month/:title/
+timezone: America/New_York
+
+markdown: kramdown
+highlighter: rouge
+
+plugins:
+  - jekyll-archives
+  - jekyll-feed
+  - jekyll-seo-tag
+
+feed:
+  tags: true
+
+jekyll-archives:
+  enabled:
+    - tags
+  layout: tag
+  permalinks:
+    tag: /tags/:name/
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor/
+
+defaults:
+  - scope:
+      type: posts
+    values:
+      layout: post

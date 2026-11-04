@@ -1,0 +1,12 @@
+---
+layout: default
+title: Tags
+permalink: /tags/
+---
+<h1>Tags</h1>
+{% assign tags = site.tags | sort %}
+<ul class="tag-list">
+  {% for tag in tags %}
+    <li><a href="{{ '/tags/' | append: tag[0] | append: '/' | relative_url }}">{{ tag[0] }}</a> ({{ tag[1].size }})</li>
+  {% endfor %}
+</ul>

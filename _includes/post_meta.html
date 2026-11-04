@@ -1,0 +1,6 @@
+<p class="post-meta">
+  <time datetime="{{ include.post.date | date_to_xmlschema }}">{{ include.post.date | date: "%B %-d, %Y" }}</time>
+  {% for tag in include.post.tags %}
+    <a class="tag" href="{{ '/tags/' | append: tag | append: '/' | relative_url }}">{{ tag }}</a>
+  {% endfor %}
+</p>

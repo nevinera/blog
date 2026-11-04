@@ -1,0 +1,6 @@
+---
+layout: default
+---
+<h1>Posts tagged "{{ page.title | escape }}"</h1>
+<p><a href="{{ '/feed/by_tag/' | append: page.title | append: '.xml' | relative_url }}">RSS feed for this tag</a></p>
+{% include post_list.html posts=page.posts %}
